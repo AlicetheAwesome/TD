@@ -30,11 +30,18 @@ $("#game-canvas").click(
   }
 );
 
+var FPS = 64;
+
 var enemy = {
   x: 96,
   y: 448,
   direction:{x: 0, y:-1},
-  speed: 64
+  speed: 64, 
+  move: 
+    function(){
+      this.x += this.direction.x * this.speed/FPS
+      this.y += this.direction.y * this.speed/FPS
+    }  
 };
 
 var hero = {
@@ -61,6 +68,7 @@ $("#game-canvas").mousemove(
   
 
 function draw(){
+  enemy.move();
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
