@@ -11,6 +11,8 @@ var SmallTowerImg = document.createElement("img");
 SmallTowerImg.src = "images/tower.png";
 var SmallTowerImg2 = document.createElement("img");
 SmallTowerImg2.src = "images/tower.png"; 
+var enemyImg = document.createElement("img");
+enemyImg.src = "images/slime.gif";
 
 var isBuilding = false;
 $("#game-canvas").click(
@@ -28,7 +30,10 @@ $("#game-canvas").click(
   }
 );
 
-
+var enemy = {
+  x: 96;
+  y: 448;
+}
 
 var hero = {
   x: 0,
@@ -61,6 +66,7 @@ function draw(){
     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
+  ctx.drawImage(enemyImg, enemy.x, enemy.y )
 }
 
 
