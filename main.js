@@ -57,9 +57,7 @@ function draw(){
   if(isBuilding === true){
     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
-  if(isBuilding === false){
-    ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
-  }
+  ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
 }
 
 
