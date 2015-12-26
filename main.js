@@ -31,9 +31,9 @@ $("#game-canvas").click(
 );
 
 var enemy = {
-  x: 96;
-  y: 448;
-}
+  x: 96,
+  y: 448
+};
 
 var hero = {
   x: 0,
