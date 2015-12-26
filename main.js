@@ -32,7 +32,9 @@ $("#game-canvas").click(
 
 var enemy = {
   x: 96,
-  y: 448
+  y: 448,
+  direction:{x: 0, y:-1},
+  speed: 64
 };
 
 var hero = {
@@ -59,7 +61,6 @@ $("#game-canvas").mousemove(
   
 
 function draw(){
-  enemy.y = enemy.y - 1;
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
