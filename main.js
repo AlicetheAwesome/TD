@@ -41,7 +41,7 @@ var enemy = {
     function(){
       this.x += this.direction.x * this.speed/FPS
       this.y += this.direction.y * this.speed/FPS
-      if(this.y > 0){
+      if(this.y < 0){
         this.y = 448
       }
     }  
