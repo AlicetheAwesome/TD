@@ -17,6 +17,9 @@ $("#game-canvas").click(
   function(){
     if(cursor.x > 0 && cursor.x < 64 && cursor.y > 0 && cursor.y < 64){
       isBuilding = !isBuilding
+      $("#SmallTowerImg2").show();
+    }else{
+      $("#SmallTowerImg2").hide();
     }
     if (isBuilding === true){
       tower.x = cursor.x;
