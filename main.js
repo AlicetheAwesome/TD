@@ -37,22 +37,42 @@ var enemy = {
   y: 448,
   direction:{x: 0, y:-1},
   speed: 64, 
+  path.Des: 0,
   move: 
     function(){
-      this.x += this.direction.x * this.speed/FPS
-      this.y += this.direction.y * this.speed/FPS
-      if(this.y < 0){
-        this.y = 448
-      }
-    } 
+      this.x += this.direction.x * this.speed/FPS;
+      this.y += this.direction.y * this.speed/FPS;
+    }
 };
+
+function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight){
+  if( pointX >= targetX 
+  && pointX <= targetX + targetWidth 
+  && pointY >= targetX 
+  && pointY <= targetY + targetHeight){
+    return(true);
+  }else{
+    return(false);
+  }
+};
+
+function getUnitVector (srcX, srcY, targetX, targetY) {
+    var offsetX = targetX - srcX;
+    var offsetY = targetY - srcY;
+    var distance = Math.sqrt( Math.pow(offsetX,2) + Math.pow(offsetY,2) );
+    var unitVector = {
+        x: offsetX/distance,
+        y: offsetY/distance
+    };
+    return unitVector;
+}
 
 var enemyPath = [
   {x:96, y:64},
   {x:384, y:64},
-  {x:384, y: 192},
-  {x:224, y: 192},
-  {x:224, y: 320},
+  {x:384, y:192},
+  {x:224, y:192},
+  {x:224, y:320},
   {x:542, y:320},
   {x:542, y:96}
 ];
@@ -81,7 +101,7 @@ $("#game-canvas").mousemove(
   
 
 function draw(){
-  //enemy.move();
+  enemy.move();
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
@@ -89,7 +109,7 @@ function draw(){
     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
-  ctx.drawImage(enemyImg, 542, 320 );
+  ctx.drawImage(enemyImg, enemy.x, enemy.y);
 }
 
 
