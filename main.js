@@ -37,15 +37,15 @@ var enemy = {
   y: 448,
   direction:{x: 0, y:-1},
   speed: 64, 
-  path.Des: 0,
+  pathDes: 0,
   move: 
     function(){
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
     }
     if(isCollided == true){
-      this.x = enemyPath[this.path.Des].x;
-      this.y = enemyPath[this.path.Des].y;
+      this.x = enemyPath[this.pathDes].x;
+      this.y = enemyPath[this.pathDes].y;
       this.path.Des += 1;
       this.direction.x = unitVector.x;
       this.direction.y = unitVector.y;
