@@ -42,11 +42,13 @@ var enemy = {
     function(){
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
-      this.x = enemyPath[this.pathDes].x;
-      this.y = enemyPath[this.pathDes].y;
-      this.pathDes = this.pathDes + 1;
-      this.direction.x = unitVector.x;
-      this.direction.y = unitVector.y;
+      if (isCollided === true){
+        this.x = enemyPath[this.pathDes].x;
+        this.y = enemyPath[this.pathDes].y;
+        this.pathDes = this.pathDes + 1;
+        this.direction.x = unitVector.x;
+        this.direction.y = unitVector.y;
+      }
     }
 };
 
