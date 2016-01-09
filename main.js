@@ -43,6 +43,13 @@ var enemy = {
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
     }
+    if(isCollided == true){
+      this.x = enemyPath[this.path.Des].x;
+      this.y = enemyPath[this.path.Des].y;
+      this.path.Des += 1;
+      this.direction.x = unitVector.x;
+      this.direction.y = unitVector.y;
+    }
 };
 
 function isCollided ( pointX, pointY, targetX, targetY, targetWidth, targetHeight ) {
