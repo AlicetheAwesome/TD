@@ -44,8 +44,18 @@ var enemy = {
       if(this.y < 0){
         this.y = 448
       }
-    }  
+    } 
 };
+
+var enemyPath = [
+  {x:96, y:64},
+  {x:384, y:64},
+  {x:384, y: 192},
+  {x:224, y: 192},
+  {x:224, y: 352},
+  {x:576, y:352},
+  {x:576, y:96}
+];
 
 var hero = {
   x: 0,
@@ -79,7 +89,7 @@ function draw(){
     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
-  ctx.drawImage(enemyImg, 384, 192 );
+  ctx.drawImage(enemyImg, enemy.x, enemy.y );
 }
 
 
