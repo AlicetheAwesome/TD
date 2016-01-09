@@ -79,7 +79,7 @@ function draw(){
     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
-  ctx.drawImage(enemyImg, enemy.x, enemy.y )
+  ctx.drawImage(enemyImg, 384, 32 );
 }
 
 
