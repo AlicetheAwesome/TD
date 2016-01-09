@@ -44,7 +44,7 @@ var enemy = {
       this.y += this.direction.y * this.speed/FPS;
       this.x = enemyPath[this.pathDes].x;
       this.y = enemyPath[this.pathDes].y;
-      this.path.Des += 1;
+      this.pathDes += 1;
       this.direction.x = unitVector.x;
       this.direction.y = unitVector.y;
     }
