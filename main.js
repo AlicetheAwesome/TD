@@ -45,16 +45,19 @@ var enemy = {
     }
 };
 
-function isCollided(pointX, pointY, targetX, targetY, targetWidth, targetHeight){
-  if( pointX >= targetX 
-  && pointX <= targetX + targetWidth 
-  && pointY >= targetX 
-  && pointY <= targetY + targetHeight){
+function isCollided ( pointX, pointY, targetX, targetY, targetWidth, targetHeight ) {
+  if(    
+    pointX >= targetX
+    &&  pointX <= targetX + targetWidth
+    &&  pointY >= targetY
+    &&  pointY <= targetY + targetHeight
+  ){
     return true;
-  }else{
+  }  else{
     return false;
   }
-};
+}
+
 
 function getUnitVector (srcX, srcY, targetX, targetY) {
     var offsetX = targetX - srcX;
