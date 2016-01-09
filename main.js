@@ -81,7 +81,7 @@ $("#game-canvas").mousemove(
   
 
 function draw(){
-  //enemy.move();
+  enemy.move();
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
