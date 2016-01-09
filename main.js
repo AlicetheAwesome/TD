@@ -43,7 +43,7 @@ var enemy = {
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
     }
-    if(isCollided == true){
+    if(isCollided === true){
       this.x = enemyPath[this.pathDes].x;
       this.y = enemyPath[this.pathDes].y;
       this.path.Des += 1;
