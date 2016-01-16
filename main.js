@@ -32,7 +32,7 @@ $("#game-canvas").click(
 
 var FPS = 64;
 
-var enemy = enemies[];
+var enemies = [];
 
 var clock = 0;
 
