@@ -32,7 +32,7 @@ $("#game-canvas").click(
 
 var FPS = 64;
 
-var enemies[];
+var enemy = enemies[];
 
 var clock = 0;
 
@@ -121,12 +121,11 @@ function draw(){
     var newEnemy = new Enemy();
     enemies.push(newEnemy);
   }
-  enemy.move();
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
   if(isBuilding === true){
-  ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
+    ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
   for(i = 0 ; i < enemies.length ; i++){
