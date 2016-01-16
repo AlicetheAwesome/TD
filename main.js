@@ -54,7 +54,7 @@ function Enemy(){
         this.direction.x = unitVector.x;
         this.direction.y = unitVector.y;
       }
-    }
+    };
   
 }
 
