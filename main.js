@@ -39,10 +39,10 @@ var clock = 0;
 function Enemy(){
   this.x =  96;
   this.y = 448;
-  direction = {x: 0, y:-1};
-  speed = 64; 
-  pathDes = 0;
-  move =  
+  this.direction = {x: 0, y:-1};
+  this.speed = 64; 
+  this.pathDes = 0;
+  this.move =  
     function(){
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
