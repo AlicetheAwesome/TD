@@ -37,12 +37,12 @@ var enemies = [];
 var clock = 0;
 
 function Enemy(){
-  this.x: 96;
-  this.y: 448;
-  direction:{x: 0, y:-1};
-  speed: 64; 
-  pathDes: 0;
-  move: 
+  this.x =  96;
+  this.y = 448;
+  direction = {x: 0, y:-1};
+  speed = 64; 
+  pathDes = 0;
+  move =  
     function(){
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
@@ -54,8 +54,7 @@ function Enemy(){
         this.direction.x = unitVector.x;
         this.direction.y = unitVector.y;
       }
-    };
-  
+    }
 }
 
 function isCollided ( pointX, pointY, targetX, targetY, targetWidth, targetHeight ) {
