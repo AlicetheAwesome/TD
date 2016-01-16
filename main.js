@@ -37,11 +37,11 @@ var enemies[];
 var clock = 0;
 
 function Enemy(){
-  x: 96,
-  y: 448,
-  direction:{x: 0, y:-1},
-  speed: 64, 
-  pathDes: 0,
+  this.x: 96;
+  this.y: 448;
+  direction:{x: 0, y:-1};
+  speed: 64; 
+  pathDes: 0;
   move: 
     function(){
       this.x += this.direction.x * this.speed/FPS;
