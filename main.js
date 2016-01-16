@@ -12,7 +12,7 @@ SmallTowerImg.src = "images/tower.png";
 var SmallTowerImg2 = document.createElement("img");
 SmallTowerImg2.src = "images/tower.png"; 
 var enemyImg = document.createElement("img");
-enemyImg.src = "images/slime.gif";
+enemyImg.src = "images/rukia.gif";
 
 var isBuilding = false;
 $("#game-canvas").click(
