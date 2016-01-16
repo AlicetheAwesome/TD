@@ -128,7 +128,7 @@ function draw(){
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
   for(i = 0 ; i < enemies.length ; i++){
     enemies[i].move();
-    ctx.drawImage(enemyImg, enemies[i].x, enemy[i].y);
+    ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
   }
   clock++; 
 }
