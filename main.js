@@ -12,7 +12,7 @@ SmallTowerImg.src = "images/tower.png";
 var SmallTowerImg2 = document.createElement("img");
 SmallTowerImg2.src = "images/tower.png"; 
 var enemyImg = document.createElement("img");
-enemyImg.src = "images/rukia.gif";
+enemyImg.src = "images/slime.gif";
 
 var isBuilding = false;
 $("#game-canvas").click(
@@ -32,7 +32,7 @@ $("#game-canvas").click(
 
 var FPS = 64;
 
-var enemy = new Enemy()
+var enemy = new Enemy();
 
 function Enemy(){
   x: 96,
