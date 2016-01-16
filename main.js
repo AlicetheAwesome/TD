@@ -42,8 +42,7 @@ function Enemy(){
   this.direction = {x: 0, y:-1};
   this.speed = 64; 
   this.pathDes = 0;
-  this.move =  
-    function(){
+  this.move = function(){
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
       if (isCollided(enemyPath[this.pathDes].x,enemyPath[this.pathDes].y,this.x,this.y,this.speed/FPS,this.speed/FPS) === true){
@@ -54,7 +53,7 @@ function Enemy(){
         this.direction.x = unitVector.x;
         this.direction.y = unitVector.y;
       }
-    }
+    };
 }
 
 function isCollided ( pointX, pointY, targetX, targetY, targetWidth, targetHeight ) {
