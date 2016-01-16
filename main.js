@@ -32,7 +32,9 @@ $("#game-canvas").click(
 
 var FPS = 64;
 
-var enemy = {
+var enemy = new Enemy()
+
+function Enemy(){
   x: 96,
   y: 448,
   direction:{x: 0, y:-1},
@@ -51,7 +53,8 @@ var enemy = {
         this.direction.y = unitVector.y;
       }
     }
-};
+  
+}
 
 function isCollided ( pointX, pointY, targetX, targetY, targetWidth, targetHeight ) {
   if(    
