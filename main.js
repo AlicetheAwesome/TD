@@ -32,7 +32,9 @@ $("#game-canvas").click(
 
 var FPS = 64;
 
-var enemy = new Enemy();
+var enemies[];
+
+var clock = 0;
 
 function Enemy(){
   x: 96,
@@ -115,15 +117,23 @@ $("#game-canvas").mousemove(
   
 
 function draw(){
+  if(clock % 80 == 0){
+    var newEnemy = new Enemy();
+    enemies.push(newEnemy);
+  }
   enemy.move();
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
   if(isBuilding === true){
-    ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
+  ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
-  ctx.drawImage(enemyImg, enemy.x, enemy.y);
+  for(i = 0 ; i < enemies.length ; i++){
+    enemies[i].move();
+    ctx.drawImage(enemyImg, enemies[i].x, enemy[i].y);
+  }
+  clock++; 
 }
 
 
