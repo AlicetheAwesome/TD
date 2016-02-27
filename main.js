@@ -14,7 +14,7 @@ SmallTowerImg2.src = "images/tower.png";
 var enemyImg = document.createElement("img");
 enemyImg.src = "images/rukia.gif";
 var crosshairImg = document.createElement("img");
-enemyImg.src = "images/crosshair.png";
+crosshairImg.src = "images/crosshair.png";
 
 var isBuilding = false;
 $("#game-canvas").click(
