@@ -124,42 +124,42 @@ var tower = {
   }  
 };
 
-$("#game-canvas").mousemove( 
-   function(event){
-    cursor.x = event.offsetX;
-    cursor.y = event.offsetY;
-    }
-  );
+// $("#game-canvas").mousemove( 
+//   function(event){
+//     cursor.x = event.offsetX;
+//     cursor.y = event.offsetY;
+//   }
+// );
   
 
-function draw(){
-  if(clock % 80 == 0){
-    var newEnemy = new Enemy();
-    enemies.push(newEnemy);
-  }
-  ctx.drawImage(bgImg,0,0);
-  ctx.drawImage(heroImg, hero.x, hero.y);
-  ctx.drawImage(towerImg, 0, 0, 64, 64 );
-  ctx.fillText("HP:" + HP, 100, 50);
-  ctx.font = "24px Verdana";
-  ctx.fillStyle = "white";
-  if(isBuilding === true){
-    ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
-  }
-  ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
-  for(i = 0 ; i < enemies.length ; i++){
-    if (enemies[i].hp <= 0){
-      enemies.splice(i, 1);
-    }else{
-      enemies[i].move();
-      ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
-  }
-  if (aimingEnemyId === null){
-    ctx.drawImage(crosshairImg, enemies[i].x, enemies[i].y);
-  }
-  clock++; 
-}
+// function draw(){
+//   if(clock % 80 == 0){
+//     var newEnemy = new Enemy();
+//     enemies.push(newEnemy);
+//   }
+//   ctx.drawImage(bgImg,0,0);
+//   ctx.drawImage(heroImg, hero.x, hero.y);
+//   ctx.drawImage(towerImg, 0, 0, 64, 64 );
+//   ctx.fillText("HP:" + HP, 100, 50);
+//   ctx.font = "24px Verdana";
+//   ctx.fillStyle = "white";
+//   if(isBuilding === true){
+//     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
+//   }
+//   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
+//   for(i = 0 ; i < enemies.length ; i++){
+//     if (enemies[i].hp <= 0){
+//       enemies.splice(i, 1);
+//     }else{
+//       enemies[i].move();
+//       ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
+//   }
+//   if (aimingEnemyId === null){
+//     ctx.drawImage(crosshairImg, enemies[i].x, enemies[i].y);
+//   }
+//   clock++; 
+// }
 
 
-// setTimeout(draw,1000);
-setInterval(draw, 16);
+// // setTimeout(draw,1000);
+// setInterval(draw, 16);
