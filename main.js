@@ -159,7 +159,7 @@ function draw(){
     }
     clock++; 
   }
-
+}
 
 // setTimeout(draw,1000);
 setInterval(draw, 16);
