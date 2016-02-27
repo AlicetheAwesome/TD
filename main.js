@@ -156,7 +156,7 @@ function draw(){
     }
   }
   if (tower.aimingEnemyId !== null){
-    ctx.drawImage(crosshairImg, enemies[i].x, enemies[i].y);
+    ctx.drawImage(crosshairImg, enemies[tower.aimingEnemyId].x, enemies[tower.aimingEnemyId].y);
   }
   clock++; 
 }
