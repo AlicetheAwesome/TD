@@ -154,7 +154,7 @@ function draw(){
       enemies[i].move();
       ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
     }
-    if (aimingEnemyId === null){
+    if (tower.aimingEnemyId !== null){
       ctx.drawImage(crosshairImg, enemies[i].x, enemies[i].y);
     }
     clock++; 
