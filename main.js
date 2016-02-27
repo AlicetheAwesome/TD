@@ -122,6 +122,9 @@ function draw(){
   ctx.drawImage(bgImg,0,0);
   ctx.drawImage(heroImg, hero.x, hero.y);
   ctx.drawImage(towerImg, 0, 0, 64, 64 );
+  ctx.fillText("hello world", 100, 100);
+  ctx.font = "24px Verdana";
+  ctx.fillStyle = "white";
   if(isBuilding === true){
     ctx.drawImage(SmallTowerImg, cursor.x, cursor.y);
   }
