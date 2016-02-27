@@ -122,7 +122,7 @@ var tower = {
       }
     }
   }  
-}
+} 
 
 $("#game-canvas").mousemove( 
    function(event){
