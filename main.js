@@ -20,7 +20,7 @@ var isBuilding = false;
 $("#game-canvas").click(
   function(){
     if(cursor.x > 0 && cursor.x < 64 && cursor.y > 0 && cursor.y < 64){
-      isBuilding = !isBuilding
+      isBuilding = !isBuilding;
       $("#SmallTowerImg2").show();
     }else{
       $("#SmallTowerImg2").hide();
@@ -114,7 +114,7 @@ var tower = {
   searchenemy: function(){
     for(var i=0; i<enemies.length; i++){
       var distance = Math.sqrt( 
-        Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2) 
+        Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2)
       );
       if (distance<=this.range) {
         this.aimingEnemyId = i;
