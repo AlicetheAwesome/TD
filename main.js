@@ -154,11 +154,11 @@ function draw(){
       enemies[i].move();
       ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
     }
-    if (tower.aimingEnemyId !== null){
-      ctx.drawImage(crosshairImg, enemies[i].x, enemies[i].y);
-    }
-    clock++; 
   }
+  if (tower.aimingEnemyId !== null){
+    ctx.drawImage(crosshairImg, enemies[i].x, enemies[i].y);
+  }
+  clock++; 
 }
 
 // setTimeout(draw,1000);
