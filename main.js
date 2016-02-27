@@ -110,7 +110,7 @@ var tower = {
   x: 0, 
   y: 0,
   range: 96,
-  aimingEnemyId = null;
+  aimingEnemyId = null,
   searchenemy: function(){
   for(var i=0; i<enemies.length; i++){
     var distance = Math.sqrt( 
