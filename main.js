@@ -112,14 +112,14 @@ var tower = {
   range: 96,
   aimingEnemyId: null,
   searchenemy: function(){
-  for(var i=0; i<enemies.length; i++){
-    var distance = Math.sqrt( 
-    Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2) 
-  );
-  if (distance<=this.range) {
-    this.aimingEnemyId = i;
-    return;
-  }
+    for(var i=0; i<enemies.length; i++){
+      var distance = Math.sqrt( 
+      Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2) 
+    );
+    if (distance<=this.range) {
+      this.aimingEnemyId = i;
+      return;
+    }
 }
 
 };
