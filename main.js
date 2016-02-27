@@ -14,7 +14,7 @@ SmallTowerImg2.src = "images/tower.png";
 var enemyImg = document.createElement("img");
 enemyImg.src = "images/rukia.gif";
 var crosshairImg = document.createElement("img");
-enemyImg.src = 
+enemyImg.src = "images/crosshair.png";
 
 var isBuilding = false;
 $("#game-canvas").click(
@@ -155,7 +155,7 @@ function draw(){
       ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
   }
   if (aimingEnemyId === null){
-    
+    ctx.drawImage(crosshairImg, enemies[i].x, enemies[i].y);
   }
   clock++; 
 }
