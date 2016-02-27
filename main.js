@@ -162,4 +162,4 @@ function draw(){
 
 
 // setTimeout(draw,1000);
-setInterval(draw, 16)
+setInterval(draw, 16);
