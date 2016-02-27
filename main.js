@@ -13,6 +13,8 @@ var SmallTowerImg2 = document.createElement("img");
 SmallTowerImg2.src = "images/tower.png"; 
 var enemyImg = document.createElement("img");
 enemyImg.src = "images/rukia.gif";
+var crosshairImg = document.createElement("img");
+enemyImg.src = 
 
 var isBuilding = false;
 $("#game-canvas").click(
@@ -42,6 +44,7 @@ function Enemy(){
   this.direction = {x: 0, y:-1};
   this.speed = 64; 
   this.pathDes = 0;
+  this.hp = 10;
   this.move = function(){
       this.x += this.direction.x * this.speed/FPS;
       this.y += this.direction.y * this.speed/FPS;
@@ -105,7 +108,20 @@ var cursor = {
 
 var tower = {
   x: 0, 
-  y: 0 
+  y: 0,
+  range: 96;
+  aimingEnemyId = null;
+  searchenemy: function(){
+  for(var i=0; i<enemies.length; i++){
+    var distance = Math.sqrt( 
+    Math.pow(this.x-enemies[i].x,2) + Math.pow(this.y-enemies[i].y,2) 
+  );
+  if (distance<=this.range) {
+    this.aimingEnemyId = i;
+    return;
+  }
+}
+
 };
 
 $("#game-canvas").mousemove( 
@@ -132,8 +148,14 @@ function draw(){
   }
   ctx.drawImage(SmallTowerImg2, tower.x, tower.y);
   for(i = 0 ; i < enemies.length ; i++){
-    enemies[i].move();
-    ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
+    if (enemies[i].hp <= 0){
+      enemies.splice(i, 1);
+    }else{
+      enemies[i].move();
+      ctx.drawImage(enemyImg, enemies[i].x, enemies[i].y);
+  }
+  if (aimingEnemyId === null){
+    
   }
   clock++; 
 }
