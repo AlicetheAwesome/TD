@@ -124,12 +124,12 @@ var tower = {
   }  
 };
 
-// $("#game-canvas").mousemove( 
-//   function(event){
-//     cursor.x = event.offsetX;
-//     cursor.y = event.offsetY;
-//   }
-// );
+$("#game-canvas").mousemove( 
+  function(event){
+    cursor.x = event.offsetX;
+    cursor.y = event.offsetY;
+  }
+);
   
 
 // function draw(){
